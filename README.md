@@ -6,30 +6,24 @@ A native Discord client for Windows with a compact interface, editable themes, a
 
 ## Download
 
-- [Application source](SC-source.zip)
-- [Windows bootstrapper](SC-bootstrapper-windows.zip)
-- [Archive checksums](SC-SOURCE-SHA256SUMS.txt)
-- [Windows app releases](https://github.com/sso-coool/sc/releases)
+Get the Windows x64 app, the bootstrapper, the matching source, and checksums from [the latest release](https://github.com/sso-coool/sc/releases/latest). S;C targets Windows 10 and 11 on x64.
 
-The first downloadable app release is being prepared. The Windows installer targets Windows 10 and 11 on x64.
+- For a portable copy, extract `SC-windows-x64.zip` and run `SC.exe`.
+- For installation and updates, extract all of `SC-bootstrapper-windows.zip` and run `Install-SC.cmd -Launch`. Open S;C through `Start-SC.cmd` to check for a new stable release at startup.
 
-## Install and update
+## Automatic updates
 
-Extract the whole bootstrapper ZIP and run `Install-SC.cmd -Launch` once an executable release is available. Use `Start-SC.cmd` to check for stable releases before starting the app.
-
-For scheduled updates, run `Enable-SCUpdates.ps1`. It checks every six hours by default and waits until S;C is closed. Add `-RestartWhenRunning` if you want it to restart S;C when an update is ready. You can use `-EveryHours 1` to check hourly or `-Disable` to stop scheduled checks. These updates can interrupt S;C calls when automatic restart is enabled.
-
-The updater verifies the download and executable before replacing the app and retains the previous version for rollback.
+Run `Enable-SCUpdates.ps1` to schedule a check every six hours. Updates wait until S;C is closed by default. Add `-RestartWhenRunning` to allow automatic restart, which can interrupt calls. Use `-EveryHours 1` to check hourly or `-Disable` to stop scheduled checks. The updater verifies the download and keeps the previous version for rollback.
 
 ## Features
 
 - Chat, DMs, threads, voice, and screen sharing
 - Editable themes, rounded layouts, and responsive panels
-- Slash-command suggestions, attachment paste, and historical command details
-- Thread controls, favorites, and pinned DMs
+- Slash-command suggestions, attachment paste, and historical command details when Discord provides them
+- Thread controls, favorites, pinned DMs, and compact Discord links in chat and embeds
 
 Some Discord features are still incomplete. Keep credentials, local profiles, and private message logs out of public issues.
 
 ## Source and license
 
-S;C is licensed under [GPL-3.0-or-later](LICENSE). The source archive includes upstream attribution and build instructions. Each Windows release includes its matching source, SHA-256 checksums, and dependency notices. See [Releasing](RELEASING.md) for the publication workflow.
+S;C is licensed under [GPL-3.0-or-later](LICENSE). The source archive includes upstream attribution and build instructions. Use the `SC-source.zip` attached to the specific release for its matching source. See [Releasing](RELEASING.md) for the publication workflow.
