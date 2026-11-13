@@ -18,6 +18,8 @@ Compare the hash with the `SC-windows-x64.zip` entry in `SC-SHA256SUMS.txt`. Has
 
 Quit any existing Yapfast or S;C instance before starting the new copy. S;C retains Yapfast's existing data and credential identifiers, so a separate application folder does **not** create an isolated account profile.
 
+> The [application source](SC-source.zip) and [Windows bootstrapper](SC-bootstrapper-windows.zip) are available now. Check the [archive hashes](SC-SOURCE-SHA256SUMS.txt) before extracting. The first downloadable Windows application release is being prepared.
+
 ## Installer and updates
 
 Download and extract `SC-bootstrapper-windows.zip` from the release. Keep its `.ps1`, `.psm1` and `.cmd` files together; the entry scripts require their shared module. They use Windows PowerShell 5.1 without extra modules. The installer targets `%LOCALAPPDATA%\Programs\SC` without administrator access:
