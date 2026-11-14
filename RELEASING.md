@@ -12,7 +12,11 @@ Use [GitHub Releases](https://github.com/sso-coool/sc/releases) to distribute Wi
 | `SC-windows-x64.zip` | Installable Windows build with `SC.exe`, `BUILD.json`, and license notices |
 | `SC-source.zip` | Exact source for this Windows build, with build and installer scripts |
 | `SC-bootstrapper-windows.zip` | Windows installer, launcher, and optional update scheduler |
-| `SC-SHA256SUMS.txt` | SHA-256 checksums for the three archives |
+| `SC-Setup.exe` | Guided Windows setup wizard built from the matching bootstrapper |
+| `SC-build.json` | The Windows archive’s `BUILD.json`, available separately for verification |
+| `SC-SHA256SUMS.txt` | SHA-256 checksums for the archives, executable and build metadata |
+
+For the combined build, keep `vencord-companion/` beside `SC.exe` in the Windows ZIP. `BUILD.json` records the companion manifest and launcher hashes, and the native executable binds both. Include the pinned Vencord and Vesktop sources and their licenses. The matching `SC-source.zip` carries the native build instructions, bootstrapper sources and patched companion source archives.
 
 The tag's automatic GitHub source download represents the repository contents. Download the separately attached `SC-source.zip` for the application source corresponding to the executable. `BUILD.json` records the executable and source hashes. The application is unsigned; release checksums verify that the files match those published.
 

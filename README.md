@@ -9,7 +9,8 @@ A native Discord client for Windows with a compact interface, editable themes, a
 Get the Windows x64 app, the bootstrapper, the matching source, and checksums from [the latest release](https://github.com/sso-coool/sc/releases/latest). S;C targets Windows 10 and 11 on x64.
 
 - For a portable copy, extract `SC-windows-x64.zip` and run `SC.exe`.
-- For installation and updates, extract all of `SC-bootstrapper-windows.zip` and run `Install-SC.cmd -Launch`. Open S;C through `Start-SC.cmd` to check for a new stable release at startup.
+- For guided installation, run `SC-Setup.exe`. For command-line setup, extract all of `SC-bootstrapper-windows.zip` and run `Install-SC.cmd -Launch`.
+- To update S;C, open **Settings → About** and select **Check now**. `Start-SC.cmd` also checks for a stable release when it starts the app.
 
 ## Automatic updates
 
@@ -19,8 +20,9 @@ Run `Enable-SCUpdates.ps1` to schedule a check every six hours. Updates wait unt
 
 - Chat, DMs, threads, voice, and screen sharing
 - Editable themes, rounded layouts, and responsive panels
-- Slash-command suggestions, attachment paste, and historical command details when Discord provides them
+- Slash-command suggestions, attachment paste, and historical command lookup and copy when Discord provides the submitted details
 - Thread controls, favorites, pinned DMs, and compact Discord links in chat and embeds
+- **Plugins** below **Friends** offers the Vencord catalog, 11 native features, and a companion that bundles 147 upstream plugins. The companion uses a separate Discord login.
 
 Some Discord features are still incomplete. Keep credentials, local profiles, and private message logs out of public issues.
 
